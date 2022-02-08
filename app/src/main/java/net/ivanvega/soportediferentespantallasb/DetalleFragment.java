@@ -7,6 +7,7 @@ import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 
 import android.telephony.mbms.StreamingServiceInfo;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -149,7 +150,7 @@ public class DetalleFragment extends Fragment
 
     @Override
     public void onPrepared(MediaPlayer mediaPlayer) {
-
+        Log.d("Audiolibros", "Entramos en onPrepared de MediaPlayer");
         mediaController = new MediaController(getActivity());
         mediaController.setMediaPlayer(this);
         mediaController.setAnchorView(

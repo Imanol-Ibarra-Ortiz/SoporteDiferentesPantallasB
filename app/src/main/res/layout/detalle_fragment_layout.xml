@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".DetalleFragment"
-    android:id="@+id/detalle_fragment_layout_root">
 
+    <androidx.core.widget.NestedScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/detalle_fragment_layout_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        tools:contex=".MainActivity">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
     <!-- TODO: Update blank fragment layout -->
     <Spinner
@@ -32,7 +37,7 @@
         android:text="Título"
         android:textAlignment="center"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textColor="@android:color/black" />
+        android:textColor="@android:color/white" />
 
     <TextView
         android:id="@+id/autor"
@@ -45,7 +50,7 @@
         android:text="Autor"
         android:textAlignment="center"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="@android:color/darker_gray" />
+        android:textColor="@android:color/white" />
 
     <ImageView
         android:id="@+id/portada"
@@ -55,7 +60,5 @@
         android:layout_centerHorizontal="true"
         android:src="@mipmap/ic_launcher" />
 
-
-
-
-</RelativeLayout>
+        </RelativeLayout>
+</androidx.core.widget.NestedScrollView>

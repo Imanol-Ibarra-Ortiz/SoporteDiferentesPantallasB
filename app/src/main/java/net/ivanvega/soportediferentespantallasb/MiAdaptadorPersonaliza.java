@@ -1,5 +1,6 @@
 package net.ivanvega.soportediferentespantallasb;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,9 +15,13 @@ import java.util.Vector;
 
 public class MiAdaptadorPersonaliza extends
         Adapter<MiAdaptadorPersonaliza.ViewHolder>{
-    private Vector<Libro> libros;
+    protected Vector<Libro> libros;
     private View.OnClickListener onClickItemListener;
     private View.OnLongClickListener onLongClickItenListener;
+
+    public MiAdaptadorPersonaliza(Vector<Libro> libros){
+        this.libros = libros;
+    }
 
     public void setOnClickItemListener (View.OnClickListener onClickListener){
         this.onClickItemListener = onClickListener;
@@ -26,7 +31,7 @@ public class MiAdaptadorPersonaliza extends
         this.onLongClickItenListener = onLongClickItemListener;
     }
 
-    public MiAdaptadorPersonaliza(Vector<Libro> libros){
+    public MiAdaptadorPersonaliza(Context contexto, Vector<Libro> libros){
         this.libros = libros;
     }
 
